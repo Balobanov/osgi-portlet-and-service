@@ -25,7 +25,7 @@ import java.io.PrintWriter;
 public class SimplePortlet extends MVCPortlet {
 
     private SimpleService simpleService;
-    private AnotherSimpleService anotherSimpleService;
+    private SimpleService anotherSimpleService;
 
     @Override
     public void doView(RenderRequest renderRequest, RenderResponse renderResponse)
@@ -56,8 +56,8 @@ public class SimplePortlet extends MVCPortlet {
         this.simpleService = simpleService;
     }
 
-    @Reference
-    public void setAnotherSimpleService(AnotherSimpleService anotherSimpleService) {
+    @Reference(service = AnotherSimpleService.class)
+    public void setAnotherSimpleService(SimpleService anotherSimpleService) {
         this.anotherSimpleService = anotherSimpleService;
     }
 }
