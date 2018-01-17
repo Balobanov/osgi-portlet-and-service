@@ -1,0 +1,5 @@
+Bundle-Name: osgi.simple.service.test
+Bundle-SymbolicName: osgi.simple
+Bundle-Version: 1.0-SNAPSHOT
+Bundle-Activator: osgi.simple.activator.ServiceActivator
+Export-Package: osgi.simple.service
